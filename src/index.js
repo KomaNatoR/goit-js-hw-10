@@ -13,8 +13,9 @@ const refs = {
 refs.inputEl.addEventListener('input',onInput);
 
 function onInput(e) {
-    const inputData =e.currentTarget.value;
+    const inputData = e.currentTarget.value;
+    let responseData = [];
 
-    fetchCountries(inputData.trim());
-    console.dir(fetchCountries(inputData));
-}
+    fetchCountries(inputData.trim()).then(countries=>countries);
+    console.log(fetchCountries(inputData.trim()).then(countries=>countries));
+};
