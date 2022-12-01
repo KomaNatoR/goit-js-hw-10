@@ -9,12 +9,12 @@ const refs = {
     listEl: document.querySelector('.country-list'),
 };
 
-refs.inputEl.addEventListener('input',debounce(onInput,DEBOUNCE_DELAY));
-// refs.inputEl.addEventListener('input',onInput);
+// refs.inputEl.addEventListener('input',debounce(onInput,DEBOUNCE_DELAY));
+refs.inputEl.addEventListener('input',onInput);
 
 function onInput(e) {
     const inputData =e.currentTarget.value;
 
     fetchCountries(inputData.trim());
-    console.dir(inputData);
+    console.dir(fetchCountries(inputData));
 }
