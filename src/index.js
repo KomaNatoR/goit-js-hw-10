@@ -25,7 +25,7 @@ function onInput(e) {
 };
 
 function createCountriesTemplate(countries) {
-    if (countries.length === 0) return;
+    // if (countries.length === 0) return;
     if (countries.length > 10) {
         refs.listEl.innerHTML = "";
         return Notiflix.Notify.info('Too many matches found. Please enter a more specific name.!!!')
