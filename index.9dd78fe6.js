@@ -1,2 +1,0 @@
-!function(){function t(t){return fetch("https://restcountries.com/v3.1/name/".concat(t,"?fields=name.official,capital,population,flags,languages")).then((function(t){if(!t.ok)throw new Error(t.status);return t.json()}))}({inputEl:document.querySelector("input"),listEl:document.querySelector(".country-list")}).inputEl.addEventListener("input",(function(n){var e=n.currentTarget.value;t(e.trim()).then((function(t){return t})),console.log(t(e.trim()).then((function(t){return t})))}))}();
-//# sourceMappingURL=index.9dd78fe6.js.map
