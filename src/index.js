@@ -17,15 +17,15 @@ refs.inputEl.addEventListener('input',debounce(onInput,DEBOUNCE_DELAY));
 
 function onInput(e) {
     const inputData = e.target.value;
-    if (inputData.length===0) {
-        refs.listEl.innerHTML ="";    
+    if (inputData.trim().length===0) {
+        return refs.listEl.innerHTML ="";    
     }
 
     fetchCountries(inputData.trim()).then(createCountriesTemplate).catch(error);
 };
 
 function createCountriesTemplate(countries) {
-    // if (countries.length === 0) return;
+    
     if (countries.length > 10) {
         refs.listEl.innerHTML = "";
         return Notiflix.Notify.info('Too many matches found. Please enter a more specific name.!!!')
